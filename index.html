@@ -831,11 +831,50 @@
 
   /* ─── RESPONSIVE ─── */
   @media (max-width: 768px) {
-    #about { grid-template-columns: 1fr; }
-    .exp-item { grid-template-columns: 1fr; gap: 1rem; }
+
+    /* Hero */
+    .nav-links { display: none; }
+    .hero-name { font-size: clamp(1.8rem, 8vw, 3rem); }
+    .hero-hello { font-size: clamp(1.5rem, 7vw, 2.5rem); }
+    .hero-sub { font-size: 0.95rem; padding: 0 1rem; }
+    .hero-tags { gap: 1.5rem; flex-direction: column; align-items: center; }
+    .hero-content { padding: 2rem 0 5rem; }
+
+    /* About */
+    #about { grid-template-columns: 1fr; gap: 2rem; }
+    .contact-card { position: static; }
+
+    /* Education */
+    #education > div { grid-template-columns: 1fr !important; }
+
+    /* Experience */
+    .exp-item { grid-template-columns: 1fr; gap: 0.75rem; }
+    .exp-meta { border-bottom: 1px solid var(--sand); padding-bottom: 0.75rem; }
+
+    /* Research/Publications grid */
+    .research-grid { grid-template-columns: 1fr; }
+
+    /* Skills */
     .skills-layout { grid-template-columns: 1fr; }
-    .stat-grid { grid-template-columns: 1fr 1fr; }
-    footer { flex-direction: column; text-align: center; }
+
+    /* General sections */
+    section { padding: 4rem 5vw; }
+    .section-title { font-size: clamp(1.6rem, 6vw, 2.5rem); }
+
+    /* Footer */
+    footer { flex-direction: column; text-align: center; gap: 0.75rem; }
+
+    /* Nav */
+    .nav { padding: 0; }
+    header { padding: 1.5rem 5vw; }
+  }
+
+  @media (max-width: 480px) {
+    .hero-name { font-size: clamp(1.5rem, 7vw, 2.2rem); }
+    .hero-sub { font-size: 0.88rem; }
+    .rc-title { font-size: 1rem; }
+    .exp-role { font-size: 1rem; }
+    .edu-uni { font-size: 1.1rem; }
   }
 </style>
 </head>
